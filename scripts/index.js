@@ -404,7 +404,7 @@ function createLayout(farr, file, fileArr){
     backButton.innerHTML = '<i class="bi bi-arrow-left"></i> Extract another archive'
     buttonHolder.appendChild(backButton)
     backButton.onclick = function(){
-        window.location.href = 'index.html'
+        window.location.href = 'https://archive-extract.netlify.app/'
     }
     
     let rateButton = document.createElement('button')
