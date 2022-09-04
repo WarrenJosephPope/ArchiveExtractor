@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive Extractor Online</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.svg">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+</head>
+<body>
+    <div class="root">
+        <div class="navbar">
+            <i class="bi bi-list" id="burger"></i>
+            <div class="menu-holder"><a href="index.html" class="navbrand"><img src="./images/logo.svg" alt="logo" /></a>
+            <ul class="navmenu">
+                <li class="list"><a href="#"><i class="icon bi bi-play-btn"></i><span>Video Tools</span><div class="rotate"><i class="bi bi-chevron-down"></i></div></a>
+                    <ul class="navsubmenu">
+                        <li><a href="https://online-video-cutter.com/video-editor"><i class="icon bi bi-film"></i><span>Video Editor</span></a></li>
+                        <li><a href="https://online-video-cutter.com/"><i class="icon bi bi-scissors"></i><span>Trim Video</span></a></li>
+                        <li><a href="https://online-video-cutter.com/merge-videos"><i class="icon bi bi-folder-plus"></i><span>Merge Videos</span></a></li>
+                        <li><a href="https://online-video-cutter.com/add-music-to-video"><i class="icon bi bi-music-note"></i><span>Add Audio to Video</span></a></li>
+                        <li><a href="https://online-video-cutter.com/add-image-to-video"><i class="icon bi bi-image"></i><span>Add Image to Video</span></a></li>
+                        <li><a href="https://online-video-cutter.com/add-text-to-video"><i class="icon bi bi-fonts"></i><span>Add Text to Video</span></a></li>
+                        <li><a href="https://online-video-cutter.com/remove-logo"><i class="icon bi bi-file-earmark-x"></i><span>Remove Logo from Video</span></a></li>
+                        <li><a href="https://online-video-cutter.com/crop-video"><i class="icon bi bi-crop"></i><span>Crop Video</span></a></li>
+                        <li><a href="https://online-video-cutter.com/rotate-video"><i class="icon bi bi-arrow-counterclockwise"></i><span>Rotate Video</span></a></li>
+                        <li><a href="https://online-video-cutter.com/flip-video"><i class="icon bi bi-symmetry-vertical"></i><span>Flip Video</span></a></li>
+                        <li><a href="https://online-video-cutter.com/resize-video"><i class="icon bi bi-aspect-ratio"></i><span>Resize Video</span></a></li>
+                        <li><a href="https://online-video-cutter.com/loop-video"><i class="icon bi bi-arrow-repeat"></i><span>Loop Video</span></a></li>
+                        <li><a href="https://online-video-cutter.com/volume"><i class="icon bi bi-volume-up"></i><span>Change Volume</span></a></li>
+                        <li><a href="https://online-video-cutter.com/change-video-speed"><i class="icon bi bi-stopwatch"></i><span>Change Video Speed</span></a></li>
+                        <li><a href="https://online-video-cutter.com/stabilize-video"><i class="icon bi bi-arrows-move"></i><span>Stabilize Video</span></a></li>
+                        <li><a href="https://webcamera.io/"><i class="icon bi bi-camera-video"></i><span>Video Recorder</span></a></li>
+                    </ul>
+                 </li>
+                <li class="list"><a href="#"><i class="icon bi bi-soundwave"></i><span>Audio Tools</span><div class="rotate"><i class="bi bi-chevron-down"></i></div></a>
+                    <ul class="navsubmenu">
+                        <li><a href="https://mp3cut.net/"><i class="icon bi bi-scissors"></i><span>Trim Audio</span></a></li>
+                        <li><a href="https://mp3cut.net/change-volume"><i class="icon bi bi-volume-up"></i><span>Change Volume</span></a></li>
+                        <li><a href="https://mp3cut.net/change-speed"><i class="icon bi bi-stopwatch"></i><span>Change Speed</span></a></li>
+                        <li><a href="https://mp3cut.net/change-pitch"><i class="icon bi bi-soundwave"></i><span>Change Pitch</span></a></li>
+                        <li><a href="https://mp3cut.net/equalizer"><i class="icon bi bi-sliders2-vertical"></i><span>Equalizer</span></a></li>
+                        <li><a href="https://mp3cut.net/reverse-audio"><i class="icon bi bi-caret-left"></i><span>Reverse Audio</span></a></li>
+                        <li><a href="https://online-voice-recorder.com/"><i class="icon bi bi-mic"></i><span>Voice Recorder</span></a></li>
+                        <li><a href="https://audio-joiner.com/"><i class="icon bi bi-plus-square-dotted"></i><span>Audio Joiner</span></a></li>
+                    </ul>
+                </li>
+                <li class="list"><a href="#"><i class="icon bi bi-file-earmark"></i><span>PDF Tools</span><div class="rotate"><i class="bi bi-chevron-down"></i></div></a>
+                    <ul class="navsubmenu">
+                        <li class="issubmenu"><a href="#"><i class="icon bi bi-file-earmark-pdf"></i><span>Convert from PDF</span></a><i class="bi bi-chevron-right"></i>
+                            <ul class="navsubsubmenu">
+                                <li><a href="https://pdf.io/pdf2doc/"><i class="icon bi bi-file-text"></i><span>PDF to Word</span></a></li>
+                                <li><a href="https://pdf.io/pdf2xls/"><i class="icon bi bi-file-earmark-spreadsheet"></i><span>PDF to Excel</span></a></li>
+                                <li><a href="https://pdf.io/pdf2ppt/"><i class="icon bi bi-filetype-ppt"></i><span>PDF to PPT</span></a></li>
+                                <li><a href="https://pdf.io/pdf2jpg/"><i class="icon bi bi-image"></i><span>PDF to JPG</span></a></li>
+                                <li><a href="https://pdf.io/pdf2png/"><i class="icon bi bi-image"></i><span>PDF to PNG</span></a></li>
+                                <li><a href="https://pdf.io/pdf2html/"><i class="icon bi bi-filetype-html"></i><span>PDF to HTML</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="issubmenu"><a href="#"><i class="icon bi bi-file-earmark-pdf"></i><span>Convert to PDF</span></a><i class="bi bi-chevron-right"></i>
+                            <ul class="navsubsubmenu">
+                                <li><a href="https://pdf.io/doc2pdf/"><i class="icon bi bi-file-text"></i><span>Word to PDF</span></a></li>
+                                <li><a href="https://pdf.io/jpg2pdf/"><i class="icon bi bi-image"></i><span>JPG to PDF</span></a></li>
+                                <li><a href="https://pdf.io/xls2pdf/"><i class="icon bi bi-file-earmark-spreadsheet"></i><span>Excel to PDF</span></a></li>
+                                <li><a href="https://pdf.io/ppt2pdf/"><i class="icon bi bi-filetype-ppt"></i><span>PPT to PDF</span></a></li>
+                                <li><a href="https://pdf.io/png2pdf/"><i class="icon bi bi-image"></i><span>PNG to PDF</span></a></li>
+                            </ul>
+                        </li>
+                        <li><a href="https://pdf.io/split/"><i class="icon bi bi-layout-split"></i><span>Split</span></a></li>
+                        <li><a href="https://pdf.io/merge/"><i class="icon bi bi-folder-plus"></i><span>Merge</span></a></li>
+                        <li><a href="https://pdf.io/compress/"><i class="icon bi bi-file-zip"></i><span>Compress</span></a></li>
+                        <li><a href="https://pdf.io/unlock/"><i class="icon bi bi-unlock"></i><span>Unlock</span></a></li>
+                        <li><a href="https://pdf.io/protect/"><i class="icon bi bi-shield"></i><span>Protect</span></a></li>
+                        <li><a href="https://pdf.io/rotate/"><i class="icon bi bi-arrow-counterclockwise"></i><span>Rotate</span></a></li>
+                        <li><a href="https://pdf.io/page-numbers/"><i class="icon bi bi-list-ol"></i><span>Add Page Numbers</span></a></li>
+                    </ul>
+                </li>
+                <li class="list"><a href="#"><i class="icon bi bi-arrow-repeat"></i><span>Converters</span><div class="rotate"><i class="bi bi-chevron-down"></i></div></a>
+                    <ul class="navsubmenu">
+                        <li><a href="https://online-audio-converter.com/"><i class="icon bi bi-music-note-beamed"></i><span>Audio Converter</span></a></li>
+                        <li><a href="https://video-converter.com/"><i class="icon bi bi-film"></i><span>Video Converter</span></a></li>
+                        <li><a href="https://convert.io/image-converter"><i class="icon bi bi-image"></i><span>Image Converter</span></a></li>
+                        <li><a href="https://convert.io/document-converter"><i class="icon bi bi-file-earmark-text"></i><span>Document Converter</span></a></li>
+                        <li><a href="https://convert.io/font-converter"><i class="icon bi bi-fonts"></i><span>Font Converter</span></a></li>
+                        <li><a href="https://convert.io/archive-converter"><i class="icon bi bi-archive"></i><span>Archive Converter</span></a></li>
+                        <li><a href="https://convert.io/ebook-converter"><i class="icon bi bi-journal-text"></i><span>Ebook Converter</span></a></li>
+                    </ul>
+                </li>
+                <li class="list"><a href="#"><i class="icon bi bi-tools"></i><span>Utilities</span><div class="rotate"><i class="bi bi-chevron-down"></i></div></a>
+                    <ul class="navsubmenu">
+                        <li><a href="https://extract.me/" class="selected"><i class="icon bi bi-archive"></i><span>Archive Extractor</span></a></li>
+                    </ul>
+                </li>
+            </ul></div>
+            <button type="button" class="login" id="login-button">Log in</button>
+        </div>
+        <div class="main">
+            <section class="intro">
+                <div class="logo-link-holder"><a href="index.html"><div class="logo"><img src="./images/rainbow.svg" alt="rainbow" />Archive Extractor</div></a></div>
+                <div class="info"><p>Archive Extractor is a small and easy online tool that can extract over 70 types of compressed files, such as 7z, zipx, rar, tar, exe, dmg and much more.</p></div>    
+            </section>
+            <section class="body">
+                <div class="handler" id="handler">
+                    <input type="file" id="file" accept=".zip,.rar,.7zip" style="display:none" />
+                    <div class="file-button" id="file-button">
+                        <p>Choose file</p>
+                        <p>from your computer</p>
+                    </div>
+                    <div class="connections">
+                        <div class="google-drive connections-holder" onclick="alert('Did not connect to Google API')"><div class="icon"></div>from Google Drive</div>
+                        <div class="dropbox connections-holder" onclick="alert('Did not connect to Dropbox API')"><div class="icon"></div>from Dropbox</div>
+                        <div id="url" class="url connections-holder"><i class="bi bi-link-45deg"></i>URL</div>
+                    </div>
+                    <div class="dnd-info">
+                        or drag and drop file here...
+                    </div>
+                </div>
+            </section>
+            <section class="formats">
+                <div class="heading">Supported formats:</div>
+                <div class="list">7z, zipx, rar, tar, exe, dmg, iso, zip, msi, nrg, gz, cab, bz2, wim, ace <span onclick="this.style.display = 'none'; document.getElementsByClassName('hidden-formats')[0].style.display = 'block'" class="show-hidden-formats">and 54 more</span><span class="hidden-formats">alz, ar, arc, arj, bin, cdi, chm, cpt, cpio, cramfs, crunch, deb, dd, dms, ext, fat, format, gpt, hfs, ihex, lbr, lzh, lzma, lzm, mbr, mdf, nsa, nds, nsis, ntfs, pit, pak, pdf, pp, qcow2, rpm, sar, squashfs, squeeze, sit, sitx, swf, udf, uefi, vdi, vhd, vmdk, warc, xar, xz, z, zoo, zi, jar</span></div>
+                <div class="heading heading-space">Supports password-protected archives</div>
+                <div class="heading heading-space">Can unpack multi-part archives (zip.001, rar.part1, z01, etc)</div>
+            </section>
+        </div>
+        <div class="footer">
+            <div class="copyright">&copy; 123apps Computer Software Est. 2012–2022</div>
+            <a href="https://extract.me/legal">Privacy</a>
+            <a href="https://extract.me/pricing">Pricing</a>
+            <a href="#" id="contact-button">Contact Us</a>
+            <a class="language" id="language-button" href="#"><i class="bi bi-globe"></i> English</a>
+        </div>
+        <div class="modal" id="contact">
+            <div class="card">
+                <div class="top">
+                    <div class="logo"></div>
+                    <div class="heading-1">Contact Us</div>
+                    <div class="close" id="close-contact"><i class="bi bi-x"></i></div>
+                </div>
+                <div class="label">Please use this form to get in touch with us, report a bug, or suggest a feature.</div>
+                <form>
+                    <textarea rows="7" class="message" name="message" placeholder="Message"></textarea>
+                    <input type="email" placeholder="Your email address" name="email" />
+                    <button type="submit" name="submit">Send message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="language">
+        <div class="card">
+            <div class="top">
+                <div class="logo"></div>
+                <div class="heading-2">Select language</div>
+                <div class="close" id="close-language"><i class="bi bi-x"></i></div>
+            </div>
+            <div class="list">
+                <a href="index.html" class="selected">English</a>
+                <a href="https://extract.me/pt/">Português</a>
+                <a href="https://extract.me/it/">Italiano</a>
+                <a href="https://extract.me/es/">Español</a>
+                <a href="https://extract.me/de/">Deutsch</a>
+                <a href="https://extract.me/fr/">Français</a>
+                <a href="https://extract.me/ru/">Русский</a>
+                <a href="https://extract.me/pl/">Polski</a>
+                <a href="https://extract.me/tr/">Türkçe</a>
+                <a href="https://extract.me/ja/">日本語</a>
+                <a href="https://extract.me/ko/">한국어</a>
+                <a href="https://extract.me/cn/">简体中文</a>
+                <a href="https://extract.me/tw/">繁體中文</a>
+                <a href="https://extract.me/vi/">tiếng Việt</a>
+                <a href="https://extract.me/th/">ภาษาไทย</a>
+                <a href="https://extract.me/id/">Bahasa Indonesia</a>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="login">
+        <div class="card">
+            <div class="top">
+                <div class="logo"></div>
+                <div class="heading-1" id="heading">Create an Account</div>
+                <div class="close" id="close-login"><i class="bi bi-x"></i></div>
+            </div>
+            <div class="label">One account for everything by 123apps</div>
+            <div class="content">
+                <button class="google"><img src="./images/icons/google-icon.svg" alt="google" />Sign in with Google</button>
+                <button class="facebook"><img src="./images/icons/facebook-icon.svg" alt="facebook" />Sign in with Facebook</button>
+                <div class="or">or</div>
+                <form id="form">
+                    <i class="bi bi-envelope icon"></i><input type="email" name="email" placeholder="E-mail" required/><br>
+                    <i class="bi bi-lock icon"></i><input type="password" id="password" name="password" placeholder="Password" /><i class="bi bi-eye-slash" id="eye"></i>
+                    <button class="submit" id="submit" name="submit" type="button" disabled>Create an Account</button>
+                </form>
+                <div class="label-2" id="label-2">By creating an account you agree to our <a href="https://extract.me/legal">Privacy & Terms</a></div>
+                <div class="toggler" id="toggler">Already have an account? <a href="#">Log in</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="reset-password">
+        <div class="card">
+            <div class="top">
+                <div class="logo"></div>
+                <div class="heading-1" id="heading">Reset Password</div>
+                <div class="close" id="close-reset"><i class="bi bi-x"></i></div>
+            </div>
+            <div class="label">Enter your email address, and we'll send you a link to reset your password.</div>
+            <div class="content">
+                <form>
+                    <i class="bi bi-envelope icon"></i><input type="email" name="email" placeholder="E-mail" required/>
+                    <button class="submit" name="submit" type="button">Reset Password</button>
+                </form>
+                <div class="label-2" id="label-2"><a href="#" class="link" id="log-in-link">Log in</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/natural-sort@1.0.0/dist/natural-sort.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
+</body>
+</html>

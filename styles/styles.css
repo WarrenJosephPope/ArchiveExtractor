@@ -1,0 +1,781 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #f9f9f9;
+}
+
+.root {
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+
+#burger {
+  color: white;
+  font-size: 26px;
+  padding: 0 10px;
+  display: none;
+}
+
+@media screen and (max-width: 895px) {
+  #burger {
+    display: block;
+  }
+  .navmenu {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+  .navmenu li {
+    background: #000;
+    font-size: 16px;
+    padding: 15px 0;
+  }
+  .navmenu li a {
+    padding: 0 10px;
+  }
+  .navmenu li .icon {
+    display: none;
+  }
+  .navsubmenu {
+    display: none;
+    margin-top: 5px;
+  }
+  .navsubmenu li {
+    background: #222;
+    padding-left: 15px;
+    font-size: 14px;
+    list-style-type: none;
+  }
+  .navsubmenu li .icon {
+    display: inline-block;
+  }
+  .issubmenu {
+    font-size: 12px;
+  }
+  .issubmenu > a > i, .issubmenu > i {
+    display: none !important;
+  }
+  .issubmenu > a {
+    color: #777 !important;
+    padding: 0 !important;
+  }
+  .navmenu li:focus .navsubmenu {
+    display: block;
+  }
+  .connections {
+    flex-direction: column;
+  }
+  .connections-holder {
+    margin: 10px 0;
+  }
+  .dnd-info {
+    display: none;
+  }
+  .footer {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+  .footer a {
+    margin: 10px 0;
+  }
+  .copyright {
+    text-align: center;
+  }
+  .language {
+    position: static !important;
+  }
+  .card .heading-1 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 895px) {
+  .navmenu li {
+    position: relative;
+    float: left;
+    padding: 0 10px;
+    cursor: pointer;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    font-size: 12px;
+  }
+  .navmenu > li:hover .navsubmenu {
+    display: block;
+  }
+  .navsubmenu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+  }
+  .navsubmenu li {
+    background: #222;
+    height: 40px;
+    width: 200px;
+    justify-content: space-between;
+  }
+  .navsubmenu li a {
+    display: inline-block;
+  }
+  .navsubmenu > li:hover .navsubsubmenu {
+    display: block;
+  }
+  .navsubsubmenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 200px;
+  }
+  .navsubmenu > li:hover > i, .navsubsubmenu > li:hover i  {
+    color: #fff;
+  }
+  .navsubmenu > li:hover, .navsubsubmenu > li:hover {
+    background: #444;
+  }
+  .navmenu > li:hover .rotate {
+    transform: rotate(180deg);
+    transition: transform 0.1s;
+  }
+  .connections-holder {
+    margin: 30px 10px;
+  }
+  .footer {
+    height: 50px;
+    padding: 0 30px;
+  }
+  .footer a {
+    margin-right: 30px;
+  }
+  .copyright {
+    margin-right: 30px;
+  }
+  .card .heading-1 {
+    font-size: 35px;
+    font-weight: 600;
+  }
+}
+.navsubmenu i {
+  color: #888;
+}
+
+.navsubmenu li .selected, .navsubmenu li .selected i {
+  color: #ffd433;
+}
+
+.navmenu li a {
+  display: block;
+  font-weight: 100;
+  color: white;
+  text-decoration: none;
+}
+
+.navmenu li a .icon {
+  font-size: 16px;
+}
+
+.navmenu li a span {
+  margin: 0 10px;
+}
+
+.navmenu > li:hover {
+  background: #222;
+}
+
+.rotate {
+  display: inline-block;
+  transition: transform 0.1s;
+}
+
+.menu-holder {
+  display: flex;
+}
+
+.navmenu {
+  list-style-type: none;
+}
+
+.navbar {
+  display: flex;
+  flex-basis: 100%;
+  height: 50px;
+  background: #000;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbrand img {
+  height: 50px;
+  margin: 0 30px;
+  padding: 16px 0;
+}
+
+.login {
+  margin-right: 30px;
+  border: 1px solid #555;
+  background: #000;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.login:hover {
+  border: 1px solid #666;
+}
+
+.main {
+  flex-basis: 100%;
+}
+
+.intro {
+  max-width: 500px;
+  width: 95%;
+  margin: 80px auto;
+}
+
+.intro .logo {
+  font-size: 22px;
+  font-weight: 600;
+  display: flex;
+  align-items: flex-end;
+}
+
+.intro a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+
+.intro .logo-link-holder {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+.intro a:hover {
+  color: #2962ff;
+}
+
+.intro .logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+.intro .info {
+  font-size: 13px;
+  color: #777;
+  text-align: center;
+}
+
+.body {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.handler {
+  max-width: 620px;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 80px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  margin-bottom: 20px;
+}
+
+.tree {
+  width: min(95vw, 620px);
+  padding: 20px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+  margin-bottom: 20px;
+}
+
+#jstree {
+  overflow: auto;
+}
+
+.tree .heading {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.tree .label {
+  font-size: 13px;
+}
+
+.tree button {
+  border: 0;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 300;
+  outline: 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tree .save-button {
+  background: #2962ff;
+  display: inline-block;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 15px 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.save-button:hover {
+  background: #1151ff;
+}
+
+.tree button i {
+  margin-right: 10px;
+}
+
+.tree .button-holder {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tree .button-holder button {
+  background: #6c757d;
+  color: white;
+  padding: 8px;
+}
+
+.button-holder button:hover {
+  background: #52595f;
+}
+
+.file-button {
+  background: #3b6fff;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 15px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0px auto;
+  transition: background-color 0.2s;
+}
+
+.file-button:hover {
+  background: #2962ff;
+  transition: background-color 0.2s;
+}
+
+.file-button p:first-child {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.file-button p:last-child {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.filename {
+  font-weight: 600;
+}
+
+.connections {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.google-drive .icon {
+  background-image: url("../images/icons/google-drive-black.png");
+}
+
+.google-drive:hover .icon {
+  background-image: url("../images/icons//google-drive-color.png");
+}
+
+.dropbox .icon {
+  background-image: url("../images/icons/dropbox-black.png");
+}
+
+.dropbox:hover .icon {
+  background-image: url("../images/icons/dropbox-color.png");
+}
+
+.url i {
+  color: black;
+  font-size: 16px;
+}
+
+.url:hover i {
+  color: #888;
+}
+
+.connections .icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+  display: inline-block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.connections-holder {
+  color: #2962ff;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.connections-holder:hover {
+  text-decoration: underline;
+}
+
+.dnd-info {
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+  color: #999;
+  font-weight: 300;
+}
+
+.formats {
+  text-align: center;
+}
+
+.formats .heading {
+  font-size: 13px;
+  font-weight: 600;
+  color: #555;
+  line-height: 1.4;
+  width: 95%;
+}
+
+.heading-space {
+  margin: 10px 0;
+}
+
+.hidden-formats {
+  display: none;
+  margin-bottom: 30px;
+}
+
+.show-hidden-formats {
+  color: #2962ff;
+  cursor: pointer;
+}
+
+.show-hidden-formats:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+.formats .list {
+  max-width: 550px;
+  width: 95%;
+  margin: 0 auto;
+  font-size: 12px;
+  line-height: 1.65;
+  color: #666;
+}
+
+.footer {
+  flex-basis: 100%;
+  width: 100%;
+  background: #f7f7f7;
+  display: flex;
+  align-items: center;
+  align-self: end;
+  margin-top: 100px;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+.footer a {
+  font-size: 13px;
+  color: #333;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.language {
+  position: absolute;
+  right: 10px;
+}
+
+.language i {
+  font-size: 16px;
+}
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.card {
+  width: 95%;
+  max-width: 650px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.card .top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card .logo {
+  background: url("../images/favicon.svg");
+  background-position: center;
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+}
+
+.card .heading-2 {
+  font-size: 18px;
+  font-weight: 600;
+  align-self: end;
+}
+
+.card .close {
+  width: 38px;
+  height: 38px;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.modal .close:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.modal .label {
+  font-size: 14px;
+  color: gray;
+  width: 70%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+#contact form {
+  width: 70%;
+  margin: 50px auto;
+}
+
+#contact form input, #contact form textarea, #contact form button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  outline: 0;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #495057;
+}
+
+#contact form button {
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  background: #2962ff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contact form button:hover {
+  background: #1151ff;
+}
+
+.modal .list {
+  -moz-column-count: 2;
+       column-count: 2;
+  -moz-column-gap: 0;
+       column-gap: 0;
+  width: 70%;
+  margin: 20px auto;
+}
+
+.modal .list a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  padding: 0 20px 0 30px;
+  line-height: 45px;
+  min-height: 45px;
+  font-size: 14px;
+}
+
+.modal .list a:hover {
+  color: #2962ff;
+}
+
+.modal .list .selected {
+  background-image: url("../images/icons/tick.svg");
+  background-position: 7px 50%;
+  background-repeat: no-repeat;
+}
+
+.card .content {
+  flex-direction: column;
+  width: 65%;
+  margin: 40px auto;
+}
+
+.card .content form {
+  width: 100%;
+}
+
+.card .content button, .card .content .or, .card .content input {
+  margin: 10px 0;
+}
+
+.card .content button, .card .content input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: 0;
+  border-radius: 5px;
+}
+
+.facebook, .google {
+  font-weight: 600;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: #fff;
+  font-size: 14px;
+}
+
+.card .content button img {
+  margin-right: 10px;
+}
+
+.card .content input {
+  padding-left: 45px;
+  font-size: 14px;
+}
+
+.card .content form i {
+  font-size: 18px;
+  position: absolute;
+  margin-top: 20px;
+  color: black;
+  opacity: 0.5;
+}
+
+.card .content form .icon {
+  margin-left: 15px;
+}
+
+#eye:hover {
+  opacity: 1;
+}
+
+#eye.selected {
+  opacity: 1;
+}
+
+#eye {
+  margin-left: -30px;
+  cursor: pointer;
+}
+
+.or {
+  text-align: center;
+}
+
+.submit {
+  color: white;
+  background: #2962ff;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit:enabled:hover {
+  background: #1151ff;
+}
+
+.submit:disabled {
+  opacity: 0.6;
+}
+
+.label-2 {
+  font-weight: 300;
+  font-size: 12px;
+  text-align: center;
+  color: #999;
+  margin: 10px 0;
+}
+
+.label-2 .link {
+  font-size: 14px;
+  color: #2962ff;
+  text-decoration: none;
+}
+
+.label-2 .link:hover {
+  color: #2962ff;
+  text-decoration: underline;
+}
+
+.label-2 a {
+  color: #999;
+}
+
+.label-2 a:hover {
+  color: #555;
+}
+
+.toggler {
+  margin-top: 40px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.toggler a {
+  text-decoration: none;
+  color: #2962ff;
+}
+
+.toggler a:hover {
+  text-decoration: underline;
+}
